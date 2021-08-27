@@ -1,5 +1,4 @@
 // dependency import
-
 import Cryptr from "cryptr"
 import fs from "fs"
 import  { promisify } from "util"
@@ -37,7 +36,7 @@ export async function readFile(path : string) : Promise<string> {
 * @return {string} Return the random string 
 */
 export function RandomString(length : number) : string {
-  var result : string
+  var result : string = ""
   for ( var i = 0; i < length; i++ ) {
     result += randomChar.charAt(Math.floor(Math.random() * randomcharlengh));
   }
