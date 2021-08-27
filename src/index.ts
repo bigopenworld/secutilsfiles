@@ -62,7 +62,7 @@ async function CryptFile(path : string, dest : string, key? : string) : Promise<
   return enckey
 }
 
-/** CryptFile function 
+/** DecryptFile function 
 * @param {string} path take the path of the input file
 * @param {string} dest take the path of the destination file
 * @param {string} key take the secret key
