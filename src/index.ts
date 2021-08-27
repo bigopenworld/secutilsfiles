@@ -18,7 +18,7 @@ const randomcharlengh = randomChar.length;
 * @return {Promise<string[]>} return a promise of files path
 * Will be use when encrypt dir feature will be created
 */
-async function readDir(directory : string) : Promise<string[]> {
+export async function readDir(directory : string) : Promise<string[]> {
   let files = await readdir(directory)
   return files.map(file => `${directory}/${file}`)
 }
@@ -27,7 +27,7 @@ async function readDir(directory : string) : Promise<string[]> {
 * @param {string} path take the path
 * @return {Promise<string>} return promise of data
 */
-async function readFile(path : string) : Promise<string> {
+export async function readFile(path : string) : Promise<string> {
   let files : Buffer = await readfile(path)
   return files.toString()
 }
@@ -36,7 +36,7 @@ async function readFile(path : string) : Promise<string> {
 * @param {number} length take the number of element in your string
 * @return {string} Return the random string 
 */
-function RandomString(length : number) : string {
+export function RandomString(length : number) : string {
   var result : string
   for ( var i = 0; i < length; i++ ) {
     result += randomChar.charAt(Math.floor(Math.random() * randomcharlengh));
@@ -50,7 +50,7 @@ function RandomString(length : number) : string {
 * @param {string | undefined} key take the key if none specified one will be generated 
 * @return {string} Return the key
 */
-async function CryptFile(path : string, dest : string, key? : string) : Promise<string> {
+export async function CryptFile(path : string, dest : string, key? : string) : Promise<string> {
   let enckey = key
   if (!enckey) {
     enckey = RandomString(20)
@@ -68,7 +68,7 @@ async function CryptFile(path : string, dest : string, key? : string) : Promise<
 * @param {string} key take the secret key
 * @return {string} Return the key
 */
-async function DecryptFile(path : string, dest : string, key : string) : Promise<string> {
+export async function DecryptFile(path : string, dest : string, key : string) : Promise<string> {
   let enckey = key
   let crypt = new Cryptr(enckey)
   const data = await readFile(path)
