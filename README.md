@@ -11,3 +11,9 @@ simple utils to crypt / decrypt files with AES
 `await secutils.dir.CryptDir("./dir","./dir.enc", "one")`
 
 `await secutils.dir.DecryptDir("./dir.enc","./dir.dec", "one")`
+
+# Building the module :
+
+## Requirements : 
+
+- typescript v3.X or newer
