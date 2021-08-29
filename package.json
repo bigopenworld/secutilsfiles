@@ -1,25 +1,23 @@
 {
   "name": "secutilsfiles",
-  "version": "1.0.5",
+  "version": "2.0.0",
   "description": "A simple package to crypt and decrypt files",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  
+  "type": "module",
+  "keywords": ["aes", "files", "directory", "crypt", "decrypt"],
   "scripts": {
-    "prepublish": "tsc",
     "start": "tsc && node .",
     "build": "tsc",
     "test": "node test"
   },
-
   "author": "Paul Millet <warstrolo.wizard@gmail.com>",
   "license": "MIT",
   "dependencies": {
     "@types/node": "^16.7.2",
     "aes256": "^1.1.0",
     "cryptr": "^6.0.2",
-    "dotenv": "^10.0.0",
-    "typescript": "^4.4.2"
+    "dotenv": "^10.0.0"
   },
   "repository": {
     "type": "git",
@@ -31,6 +29,6 @@
   "homepage": "https://github.com/bigopenworld/secutilsfiles/issues",
   "devDependencies": {
     "@types/cryptr": "^4.0.1",
-    "typescript": "^2.7.2"
+    "typescript": "^2.9.2"
   }
 }
