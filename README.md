@@ -1,5 +1,7 @@
 # secutilsfiles
 
+[![Node.js CI](https://github.com/bigopenworld/secutilsfiles/actions/workflows/node.yml/badge.svg)](https://github.com/bigopenworld/secutilsfiles/actions/workflows/node.yml)
+
 simple utils to crypt / decrypt files with AES
 
 # Usage
